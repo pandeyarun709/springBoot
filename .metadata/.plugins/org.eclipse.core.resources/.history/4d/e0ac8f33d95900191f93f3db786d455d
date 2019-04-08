@@ -1,0 +1,28 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmpController {
+	@Autowired
+	private EmpService empS;
+	
+	@RequestMapping("/getEmp")
+	public List<Emp> getAllEmp() {
+		return empS.getAllEmp();
+	}
+	
+	@RequestMapping("/getEmp/{id}")
+	public List<Emp> getEmp(@PathVariable String id) {
+		
+		return empS.getEmp(id);
+	}
+	
+	
+
+}

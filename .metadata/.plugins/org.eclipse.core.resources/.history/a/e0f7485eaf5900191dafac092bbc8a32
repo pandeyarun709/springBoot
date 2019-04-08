@@ -1,0 +1,20 @@
+package com.example.demo;
+
+import java.util.List;
+import java.util.Arrays;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TopicController {
+	
+	@RequestMapping("/topics")
+	public List<Emp> getAllTopics() {
+		return Arrays.asList(
+				new Emp(1 , "pandeyarun709@gmail.com" , "arun"),
+				new Emp(2 , "arun.quikr@gmail.com" , "xyz")
+		);
+	}
+
+}

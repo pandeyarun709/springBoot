@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmpController {
+	@Autowired
+	private EmpService empS;
+	
+	public List<Emp> getAllEmp() {
+		return empS.getAllEmp();
+	}
+	
+	
+	
+
+}
